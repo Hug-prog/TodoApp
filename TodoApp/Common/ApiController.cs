@@ -5,6 +5,7 @@ namespace TodoApp.Common;
 [ApiController, Route("[controller]")]
 public class ApiController: ControllerBase
 {
+    // add response
     public Task<ActionResult<Result<T>>> SendResponse<T>(Result<T> data)
     {
         return Task.FromResult<ActionResult<Result<T>>>(

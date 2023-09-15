@@ -1,0 +1,17 @@
+﻿services:
+  maria:
+    container_name: mariaDB
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: todo
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - maria-data:/var/lib/mysql
+
+volumes:
+  maria-data:
